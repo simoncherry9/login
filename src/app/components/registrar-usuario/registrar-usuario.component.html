@@ -1,8 +1,8 @@
 <div class="container mt-5">
-    <div class="row">
+    <div *ngIf="!loading" class="row">
         <div class="col-lg-6 offset-lg-3">
             <div class="card text-center">
-                <div *ngIf="!loading" class="card-body">
+                <div class="card-body">
                     <img class="logo" src="../../../assets/usuario.png" alt="Login">
                     <h2>Registrarse</h2>
                     <form (ngSubmit)="registrar()" [formGroup]="registrarUsuario">

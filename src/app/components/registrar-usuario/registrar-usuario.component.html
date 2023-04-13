@@ -5,20 +5,20 @@
                 <div class="card-body">
                     <img class="logo" src="../../../assets/usuario.png" alt="Login">
                     <h2>Registrarse</h2>
-                    <form>
+                    <form (ngSubmit)="registrar()" [formGroup]="registrarUsuario">
                         <div class="form-floating mb-3 mt-4">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <input type="email" class="form-control" id="floatingInput" formControlName="email" placeholder="name@example.com">
                             <label for="floatingInput">Correo electrónico</label>
                         </div>
                         <div class="form-floating">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <input type="password" class="form-control" id="floatingPassword" formControlName="password" placeholder="Password">
                             <label for="floatingPassword">Contraseña</label>
                         </div>
                         <div class="form-floating mt-3">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <input type="password" class="form-control" id="floatingPassword" formControlName="repetirPassword" placeholder="Password">
                             <label for="floatingPassword">Repetir contraseña</label>
                         </div>
-                        <button class="btn btn-primary mt-4 btn-lg mb-4"  style="margin-right: 10px;">Crear cuenta</button>
+                        <button class="btn btn-primary mt-4 btn-lg mb-4" type="submit" style="margin-right: 10px;">Crear cuenta</button>
                         <button class="btn btn-secondary mt-4 btn-lg mb-4" routerLink="login" >Volver</button>
                     </form>
                 </div>

@@ -2,3 +2,11 @@ body {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(assets/fondo.jpg);
     background-size: cover;
 }
+
+.form-floating {
+    text-align: start;
+}
+
+.errorLabel {
+    margin-left: 10px;
+}

@@ -9,12 +9,21 @@
                         <div class="form-floating mb-3 mt-3">
                             <input type="email" formControlName="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                             <label for="floatingInput">Correo electrónico</label>
+                            <span *ngIf="loginUsario.get('email')?.hasError('required') && loginUsario.get('email')?.touched" class="text-danger errorLabel">
+                                El <strong>correo</strong> es requerido
+                            </span>
+                            <span *ngIf="loginUsario.get('email')?.hasError('email') && loginUsario.get('email')?.touched" class="text-danger errorLabel">
+                                El formato del <strong>correo</strong> es invalido
+                            </span>
                         </div>
                         <div class="form-floating">
                             <input type="password" formControlName="password" class="form-control" id="floatingPassword" placeholder="Password">
                             <label for="floatingPassword">Contraseña</label>
+                            <span *ngIf="loginUsario.get('password')?.hasError('required') && loginUsario.get('password')?.touched" class="text-danger errorLabel">
+                                La <strong>contraseña</strong> es requerida
+                            </span>
                         </div>
-                        <button type="submit" class="btn btn-primary mt-4 btn-lg mb-4">Ingresar</button>
+                        <button type="submit" [disabled]="loginUsario.invalid" class="btn btn-primary mt-4 btn-lg mb-4">Ingresar</button>
                         <p>¿No tienes una cuenta? <a routerLink="/registrar-usuario">Registrarme</a>.</p>
                         <a class="mt-2" routerLink="/recuperar-password">Recuperar contraseña</a>
                     </form>

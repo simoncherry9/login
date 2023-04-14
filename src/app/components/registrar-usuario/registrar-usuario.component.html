@@ -9,16 +9,28 @@
                         <div class="form-floating mb-3 mt-4">
                             <input type="email" class="form-control" id="floatingInput" formControlName="email" placeholder="name@example.com">
                             <label for="floatingInput">Correo electrónico</label>
+                            <span *ngIf="registrarUsuario.get('email')?.hasError('required') && registrarUsuario.get('email')?.touched" class="text-danger errorLabel">
+                                El <strong>correo</strong> es requerido
+                            </span>
+                            <span *ngIf="registrarUsuario.get('email')?.hasError('email') && registrarUsuario.get('email')?.touched" class="text-danger errorLabel">
+                                El formato del <strong>correo</strong> es invalido
+                            </span>
                         </div>
                         <div class="form-floating">
                             <input type="password" class="form-control" id="floatingPassword" formControlName="password" placeholder="Password">
                             <label for="floatingPassword">Contraseña</label>
+                            <span *ngIf="registrarUsuario.get('password')?.hasError('required') && registrarUsuario.get('password')?.touched" class="text-danger errorLabel">
+                                La <strong>contraseña</strong> es requerida
+                            </span>
+                            <span *ngIf="registrarUsuario.get('password')?.hasError('minlength') && registrarUsuario.get('password')?.touched" class="text-danger errorLabel">
+                                La <strong>contraseña</strong> debe tener un minimo de seis caracteres
+                            </span>
                         </div>
                         <div class="form-floating mt-3">
                             <input type="password" class="form-control" id="floatingPassword" formControlName="repetirPassword" placeholder="Password">
                             <label for="floatingPassword">Repetir contraseña</label>
                         </div>
-                        <button class="btn btn-primary mt-4 btn-lg mb-4" type="submit" style="margin-right: 10px;">Crear cuenta</button>
+                        <button class="btn btn-primary mt-4 btn-lg mb-4" type="submit" [disabled]="registrarUsuario.invalid" style="margin-right: 10px;">Crear cuenta</button>
                         <button class="btn btn-secondary mt-4 btn-lg mb-4" routerLink="login" >Volver</button>
                     </form>
                 </div>

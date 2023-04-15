@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms"
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { FirebaseCodeErrorService } from 'src/app/services/firebase-code-error.service';
+import { ProductosComponent } from '../productos/productos.component';
 
 @Component({
   selector: 'app-login',
@@ -36,7 +37,7 @@ export class LoginComponent implements OnInit {
       this.loading = true;
       this.afAuth.signInWithEmailAndPassword(email, password). then ((user) => {
         if(user.user?.emailVerified) {
-          this.router.navigate(["/dashboard"]);
+          this.router.navigate(["/dashboard"])
         } else {
           this.router.navigate(["/verificar-correo"]);
         }

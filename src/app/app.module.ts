@@ -18,6 +18,7 @@ import { RecuperarPasswordComponent } from './components/recuperar-password/recu
 import { SpinnerComponent } from './shared/spinner/spinner.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { environment } from 'src/environments/environment.development';
+import { ProductosComponent } from './components/productos/productos.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { environment } from 'src/environments/environment.development';
     VerificarCorreoComponent,
     RecuperarPasswordComponent,
     SpinnerComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProductosComponent
   ],
   imports: [
     BrowserModule,

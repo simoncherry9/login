@@ -1,22 +1,23 @@
 # AplicacionEmpleados
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.5.
+Este proyecto a sido generado con [Angular CLI](https://github.com/angular/angular-cli) version 15.2.5.
 
-## Development server
+## Servidor de desarrollo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Al descargar el repositorio, abre el simbolo de sistema dentro de la carpeta y tipea el comando `ng serve` para
+probar el funcionamiento de la aplicacion en modo dev, si te diriges a `http://localhost:4200/` podras ver su funcionamiento. La aplicacón se recarga automaticamente si se realiza algun cambio en sus archivos de origen. Si al momento de ejecutar el comando `ng serve` la consola te devuelve un error utiliza primero `npm install` luego ya podras lanzar el servidor de pruebas.
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Ejecute el comando `ng generate component component-name` para generar un un nuevo componente. También puede usar `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Ejecute `ng build` para compilar el proyecto. Los artefactos de compilación se almacenarán en el directorio `dist/`.
 
-## Running unit tests
+## Ejecución de pruebas unitarias
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Ejecute `ng test` para ejecutar test vía [Karma](https://karma-runner.github.io).
 
 ## Running end-to-end tests
 
